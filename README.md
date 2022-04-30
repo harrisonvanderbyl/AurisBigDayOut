@@ -16,7 +16,5 @@ A fangame for [BtDEM](https://www.royalroad.com/fiction/36299/beneath-the-dragon
 
 -[Royal Road](https://www.royalroad.com/profile/82702)
 
--[ScribbleHub(NSFW)](https://www.scribblehub.com/profile/67733/toungetied/)
-
 -[TikTok](https://www.tiktok.com/@plasmaware)
 

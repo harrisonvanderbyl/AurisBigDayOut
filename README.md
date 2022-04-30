@@ -1,5 +1,5 @@
 # Auri's Big Day Out
-A fangame for BTDeM
+A fangame for [BtDEM](https://www.royalroad.com/fiction/36299/beneath-the-dragoneye-moons)
 
 # Downloads
 -[Windows](https://drive.google.com/file/d/1oDOJZXerrnhYUTo7Udms1Q7oT0lDk-88/view?usp=sharing)

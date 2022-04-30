@@ -10,6 +10,8 @@ A fangame for [BtDEM](https://www.royalroad.com/fiction/36299/beneath-the-dragon
 
 -[Video](https://drive.google.com/file/d/1tFbP2fvRIJbMuqXP_2jUHIUhjY2PZ_0f/view)
 
+![Preview](https://drive.google.com/file/d/1tFbP2fvRIJbMuqXP_2jUHIUhjY2PZ_0f/preview)
+
 # Controls
 
 ABDO: move cursor, click

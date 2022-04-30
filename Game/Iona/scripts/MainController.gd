@@ -13,4 +13,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func _process(delta):
+	$"HealthBars/0".value = $Player0.get_child(0).health
+	$"HealthBars/1".value = $Player1.get_child(0).health

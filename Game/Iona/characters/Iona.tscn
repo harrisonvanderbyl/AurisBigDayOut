@@ -506,7 +506,7 @@ mesh = SubResource( 7 )
 material/0 = null
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( -0.51082, 0.305739, -0.803483, -0.156223, -0.952074, -0.26296, -0.845373, -0.00880271, 0.534103, -0.232029, 5.69499, 2.85697 )
+transform = Transform( -0.984911, -0.0852505, 0.150607, 0.0408761, -0.960224, -0.276221, 0.168164, -0.265897, 0.94922, -5.28747, 5.40272, 0.33974 )
 bone_name = "mixamorig_LeftLeg"
 
 [node name="KinematicBody2" type="RigidBody" parent="Skeleton/BoneAttachment"]
@@ -518,7 +518,7 @@ transform = Transform( 0.530541, 0.846402, 0.0468922, -0.0632328, -0.0156758, 0.
 shape = SubResource( 1794 )
 
 [node name="BoneAttachment2" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( -0.19775, 0.427759, -0.881997, 0.140124, -0.878189, -0.45733, -0.970185, -0.214026, 0.113723, -1.40301, 5.58391, -1.44536 )
+transform = Transform( -0.906509, -0.201977, -0.370735, 0.266752, -0.954661, -0.132154, -0.327234, -0.218693, 0.919289, -7.31553, 5.46234, -0.712611 )
 bone_name = "mixamorig_RightLeg"
 
 [node name="KinematicBody2" type="RigidBody" parent="Skeleton/BoneAttachment2"]
@@ -537,7 +537,7 @@ skeleton = NodePath("../../..")
 material/0 = null
 
 [node name="HitToBody" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( 0.475447, 0.0322728, -0.879152, 0.00032405, 0.99932, 0.0368593, 0.879744, -0.0178095, 0.475113, 0.420956, 12.6286, 0.220776 )
+transform = Transform( 0.985653, 0.0597294, 0.15786, -0.0558536, 0.99802, -0.0288798, -0.159272, 0.0196484, 0.987038, -5.52384, 12.6312, -0.487408 )
 bone_name = "mixamorig_Spine1"
 
 [node name="HitToBody" type="Area" parent="Skeleton/HitToBody"]
@@ -547,7 +547,7 @@ transform = Transform( 0.917536, 0.0303861, 0.396491, -0.0540605, 0.997351, 0.04
 shape = SubResource( 1795 )
 
 [node name="HitToFace" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( 0.961888, -0.0989892, -0.254896, 0.0145564, 0.949389, -0.313766, 0.273055, 0.298097, 0.914647, 0.0909508, 16.0684, 0.491745 )
+transform = Transform( 0.772666, 0.145199, 0.617984, 0.0161911, 0.968665, -0.247838, -0.634606, 0.201502, 0.746104, -5.2728, 16.1289, -0.238234 )
 bone_name = "mixamorig_Head"
 
 [node name="HitToFace" type="Area" parent="Skeleton/HitToFace"]
@@ -558,7 +558,7 @@ transform = Transform( 0.917536, 0.0303861, 0.396491, -0.0540605, 0.997351, 0.04
 shape = SubResource( 1795 )
 
 [node name="BoneAttachment3" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( 0.167838, -0.858909, -0.483845, -0.719447, 0.228826, -0.655769, 0.673963, 0.458164, -0.579533, 2.32982, 12.7453, 3.67906 )
+transform = Transform( 0.394825, 0.766578, -0.506431, -0.277014, -0.426236, -0.861153, -0.876, 0.480294, 0.0440636, -0.882684, 13.464, -0.54321 )
 bone_name = "mixamorig_LeftForeArm"
 
 [node name="KinematicBody2" type="RigidBody" parent="Skeleton/BoneAttachment3"]
@@ -570,7 +570,7 @@ transform = Transform( 0.530541, 0.846402, 0.0468922, -0.0632328, -0.0156758, 0.
 shape = SubResource( 1796 )
 
 [node name="BoneAttachment4" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( 0.736425, 0.20299, 0.645347, 0.28083, 0.776127, -0.564589, -0.615479, 0.597009, 0.514555, -3.00901, 13.137, -0.551343 )
+transform = Transform( 0.121153, 0.982889, 0.138744, 0.886733, -0.0443473, -0.46015, -0.446123, 0.178778, -0.876933, -8.05318, 12.2773, 1.41377 )
 bone_name = "mixamorig_RightForeArm"
 
 [node name="KinematicBody2" type="RigidBody" parent="Skeleton/BoneAttachment4"]
@@ -591,6 +591,8 @@ process_mode = 0
 parameters/playback = SubResource( 1782 )
 parameters/conditions/isLeft = true
 parameters/conditions/isRight = false
+parameters/conditions/loser = false
+parameters/conditions/winner = false
 parameters/left/playback = SubResource( 1788 )
 parameters/left/conditions/chestKick = false
 parameters/left/conditions/elbow = false

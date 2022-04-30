@@ -1,7 +1,13 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=5 format=2]
+[gd_resource type="AnimationNodeStateMachine" load_steps=11 format=2]
 
 [ext_resource path="res://Game/Iona/Animations/tateMachine/Attack/attackleft.tres" type="AnimationNodeStateMachine" id=1]
 [ext_resource path="res://Game/Iona/Animations/tateMachine/Attack/attackright.tres" type="AnimationNodeStateMachine" id=2]
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "loser"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "winner"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=1]
 advance_condition = "isRight"
@@ -11,13 +17,31 @@ xfade_time = 0.25
 advance_condition = "isLeft"
 xfade_time = 0.25
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=5]
+advance_condition = "loser"
+xfade_time = 0.5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
+advance_condition = "loser"
+xfade_time = 0.5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+advance_condition = "winner"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+advance_condition = "winner"
+
 [resource]
 resource_local_to_scene = true
 resource_name = "MainGametateMachine"
 states/left/node = ExtResource( 1 )
 states/left/position = Vector2( 309.143, -271.374 )
+states/loser/node = SubResource( 3 )
+states/loser/position = Vector2( 546.895, -271.374 )
 states/right/node = ExtResource( 2 )
 states/right/position = Vector2( 309.143, -146.374 )
-transitions = [ "left", "right", SubResource( 1 ), "right", "left", SubResource( 2 ) ]
+states/winner/node = SubResource( 4 )
+states/winner/position = Vector2( 538.895, -146.374 )
+transitions = [ "left", "right", SubResource( 1 ), "right", "left", SubResource( 2 ), "left", "loser", SubResource( 5 ), "right", "loser", SubResource( 6 ), "left", "winner", SubResource( 7 ), "right", "winner", SubResource( 8 ) ]
 start_node = "left"
 graph_offset = Vector2( -51.1048, -339.838 )

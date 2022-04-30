@@ -3,6 +3,7 @@ extends Spatial
 
 # Declare member variables here. Examples:
 # var a = 2
+var health = 100;
 # var b = "text"
 var idealWalkingSpeed = 6
 var runThreshold = 16
@@ -11,6 +12,7 @@ export(String) var player = "0"
 export(bool) var isLeft setget setDirection
 export(float) var xvel setget setXVelocity
 var gotHit=""
+var end = false;
 # Called when the node enters the scene tree for the first time.
 func _process(delta):
 	isLeft = isLeft
@@ -19,10 +21,19 @@ func _process(delta):
 	attack("chestKick","chestKick",true,false)
 	attack("elbow","elbow",false,false)
 	attack("headKick","headKick",true,false)
+	if(health <= 0):
+		$AnimationTree["parameters/conditions/loser"] = true
+		end = true
+		
+	if(get_node(otherPlayer).health <= 0):
+		$AnimationTree["parameters/conditions/winner"] = true
+		end = true
+	
 	setDirection(transform.origin.x < get_node(otherPlayer).transform.origin.x)
 	setXVelocity(Input.get_vector("ml"+player, "mr"+player, "mu"+player, "md"+player).x*30)
 	rotation.y = lerp_angle(rotation.y,3.1415+((3.0*3.1415/2.0) if isLeft else 3.1415/2.0),0.15)
-	transform.origin.x = clamp(transform.origin.x+xvel*delta,-30,30)
+	if(!end):
+		transform.origin.x = clamp(transform.origin.x+xvel*delta,-30,30)
 	damageCheck()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func setDirection(isLeftin):
@@ -76,7 +87,9 @@ func setXVelocity(vel):
 
 func _on_HitToBody_body_entered(body):
 	gotHit = "Body"
+	health -= 3
 
 
 func _on_HitToFace_body_entered(body):
 	gotHit = "Face"
+	health -=5

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Game/Iona/Animations/Hook(1).tres" type="Animation" id=1]
 [ext_resource path="res://Game/Iona/Animations/chestKick(1).tres" type="Animation" id=2]
@@ -26,6 +26,8 @@
 [ext_resource path="res://Game/Iona/Animations/HitToBody.tres" type="Animation" id=24]
 [ext_resource path="res://Game/Iona/Animations/hitToFace(1).tres" type="Animation" id=25]
 [ext_resource path="res://Game/Iona/Animations/HitToBody(1).tres" type="Animation" id=26]
+[ext_resource path="res://Game/Iona/Animations/loser.tres" type="Animation" id=27]
+[ext_resource path="res://Game/Iona/Animations/winner.tres" type="Animation" id=28]
 
 [sub_resource type="Animation" id=8]
 resource_name = "default"
@@ -421,6 +423,8 @@ anims/headKick = ExtResource( 14 )
 anims/headkick(1) = ExtResource( 11 )
 anims/hitToFace = ExtResource( 23 )
 anims/hitToFace(1) = ExtResource( 25 )
+anims/loser = ExtResource( 27 )
 anims/punch = ExtResource( 7 )
 anims/running = ExtResource( 19 )
 anims/walking = ExtResource( 16 )
+anims/winner = ExtResource( 28 )

@@ -16,7 +16,7 @@ Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 https://creativecommons.org/licenses/by-sa/3.0/
  "
-run/main_scene="res://Game/Iona/Bar.tscn"
+run/main_scene="res://Game/Main/gui/menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [input]

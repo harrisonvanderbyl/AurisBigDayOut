@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wood Fence
+* source:	https://sketchfab.com/3d-models/wood-fence-c094a54cbaae4638bbee03625fbd9610
+* author:	Nelesh_surve (https://sketchfab.com/Nelesh_surve)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wood Fence" (https://sketchfab.com/3d-models/wood-fence-c094a54cbaae4638bbee03625fbd9610) by Nelesh_surve (https://sketchfab.com/Nelesh_surve) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

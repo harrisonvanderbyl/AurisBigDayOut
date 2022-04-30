@@ -1,0 +1,11 @@
+Model Information:
+* title:	Grass with autumn leaves
+* source:	https://sketchfab.com/3d-models/grass-with-autumn-leaves-84710858bb404ec2a479b4d854b7f5e2
+* author:	Krzysztof Lewicki (https://sketchfab.com/slavgamedev)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Grass with autumn leaves" (https://sketchfab.com/3d-models/grass-with-autumn-leaves-84710858bb404ec2a479b4d854b7f5e2) by Krzysztof Lewicki (https://sketchfab.com/slavgamedev) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)

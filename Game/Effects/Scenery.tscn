@@ -1,0 +1,19 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Game/Effects/Scenery.gd" type="Script" id=1]
+[ext_resource path="res://Imports/enviroment/shrub/shrub2.dae" type="PackedScene" id=2]
+[ext_resource path="res://Game/enviroment/stick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/enviroment/stump.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/enviroment/tree2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Game/enviroment/tree1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Imports/enviroment/shrub/grass1.dae" type="PackedScene" id=7]
+[ext_resource path="res://Imports/enviroment/rocks/rock4.dae" type="PackedScene" id=8]
+[ext_resource path="res://Imports/enviroment/rocks/rock3.dae" type="PackedScene" id=9]
+[ext_resource path="res://Imports/enviroment/shrub/grass2.dae" type="PackedScene" id=10]
+[ext_resource path="res://Imports/enviroment/rocks/rock2.dae" type="PackedScene" id=11]
+[ext_resource path="res://Imports/enviroment/shrub/hroom2.dae" type="PackedScene" id=12]
+[ext_resource path="res://Game/enviroment/rock1.tscn" type="PackedScene" id=13]
+
+[node name="Scenery" type="Spatial"]
+script = ExtResource( 1 )
+options = [ ExtResource( 6 ), ExtResource( 13 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 11 ) ]

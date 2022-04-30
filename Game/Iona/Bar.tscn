@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Game/Iona/characters/Iona.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Iona/Enviroment/furniture/Bar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Imports/Imports/Aurie/scene.gltf" type="PackedScene" id=3]
+[ext_resource path="res://Game/Iona/characters/Elaine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Iona/OmniLightmm.gd" type="Script" id=5]
+[ext_resource path="res://Game/Iona/effects/auri/taunt/RudeAuri.tscn" type="PackedScene" id=58]
+[ext_resource path="res://Game/Iona/scripts/MainController.gd" type="Script" id=78]
+
+[sub_resource type="AnimationNodeAnimation" id=1769]
+animation = "Animation"
+
+[sub_resource type="AnimationNodeAnimation" id=1770]
+animation = "Animation"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1771]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1772]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=1773]
+states/Animation/node = SubResource( 1770 )
+states/Animation/position = Vector2( 176, 70 )
+"states/Animation 2/node" = SubResource( 1769 )
+"states/Animation 2/position" = Vector2( 429, 62 )
+transitions = [ "Animation", "Animation 2", SubResource( 1771 ), "Animation 2", "Animation", SubResource( 1772 ) ]
+start_node = "Animation"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1774]
+
+[sub_resource type="ProceduralSky" id=1775]
+sky_energy = 0.01
+ground_energy = 0.03
+sun_energy = 0.1
+
+[sub_resource type="Environment" id=1776]
+background_mode = 1
+background_sky = SubResource( 1775 )
+ambient_light_color = Color( 0.694118, 0.309804, 0, 1 )
+ambient_light_energy = 0.13
+fog_depth_begin = 2.0
+fog_depth_end = 10.0
+tonemap_mode = 3
+auto_exposure_min_luma = 3.07
+auto_exposure_max_luma = 11.02
+auto_exposure_speed = 0.01
+ss_reflections_enabled = true
+dof_blur_far_enabled = true
+dof_blur_far_distance = 2.55
+dof_blur_far_transition = 3.06
+dof_blur_far_quality = 0
+dof_blur_near_distance = 2.17
+dof_blur_near_transition = 1.19
+dof_blur_near_amount = 0.11
+dof_blur_near_quality = 0
+glow_enabled = true
+glow_intensity = 1.12
+glow_strength = 1.04
+glow_bloom = 0.11
+glow_blend_mode = 1
+
+[node name="Bar" type="Spatial"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.46875, 0, 0 )
+script = ExtResource( 78 )
+
+[node name="Iona" parent="." instance=ExtResource( 1 )]
+otherPlayer = NodePath("../Elaine")
+
+[node name="scene" parent="." instance=ExtResource( 2 )]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.902495, 0.4307, 0, -0.4307, 0.902495, 2.195, 17.941, 21.321 )
+
+[node name="scene2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -8.60276, 0, -28.7401, 0, 30, 0, 28.7401, 0, -8.60276, 9.81083, 9.82194, -1.83779 )
+
+[node name="Skeleton" parent="scene2/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0" index="0"]
+bones/3/bound_children = [ NodePath("BoneAttachment") ]
+
+[node name="BoneAttachment" type="BoneAttachment" parent="scene2/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="1"]
+transform = Transform( -0.0959733, 0.994814, -0.0336728, 0.924989, 0.10163, 0.366151, 0.367675, 0.00399363, -0.929946, 0.0514104, 5.34541, 1.00427 )
+bone_name = "Neck_M.4_4"
+
+[node name="OmniLight" type="OmniLight" parent="scene2/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment"]
+transform = Transform( 3.32604, 0.0480118, 0.21509, 0.00617594, 3.23169, -0.816861, -0.220297, 0.815473, 3.22453, -0.0040443, 5.01715, 1.06126 )
+light_color = Color( 1, 0.796078, 0, 1 )
+light_energy = 2.07617
+omni_range = 0.968249
+omni_attenuation = 1.18129
+script = ExtResource( 5 )
+
+[node name="RudeAuri" parent="scene2/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment" instance=ExtResource( 58 )]
+transform = Transform( 0.249921, 1.93711, -0.430301, -1.98379, 0.253997, -0.00876158, 0.0461618, 0.427909, 1.95314, 2.75905, -2.8633, -6.67374 )
+visible = false
+
+[node name="AnimationTree" type="AnimationTree" parent="scene2"]
+tree_root = SubResource( 1773 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 1774 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1776 )
+
+[node name="Elaine" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.8579, 0, -2.62057 )
+otherPlayer = NodePath("../Iona")
+player = "1"
+
+[editable path="scene2"]
+[editable path="scene2/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment/RudeAuri"]

@@ -1,0 +1,57 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=12 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1792]
+animation = "running"
+
+[sub_resource type="AnimationNodeTimeScale" id=1793]
+
+[sub_resource type="AnimationNodeBlendTree" id=1794]
+nodes/Animation/node = SubResource( 1792 )
+nodes/Animation/position = Vector2( 40, 100 )
+nodes/TimeScale/node = SubResource( 1793 )
+nodes/TimeScale/position = Vector2( 240, 60 )
+nodes/output/position = Vector2( 440, 120 )
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]
+
+[sub_resource type="AnimationNodeAnimation" id=1790]
+animation = "Walking(1)"
+
+[sub_resource type="AnimationNodeAnimation" id=1797]
+animation = "WalkingBackwards(1)"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1795]
+advance_condition = "running"
+xfade_time = 0.5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1796]
+advance_condition = "notRunning"
+xfade_time = 0.5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1798]
+advance_condition = "walkingBackwards"
+xfade_time = 0.5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1799]
+advance_condition = "notWalkingBackwards"
+xfade_time = 0.5
+
+[sub_resource type="AnimationNodeStateMachine" id=1791]
+states/BlendTree/node = SubResource( 1794 )
+states/BlendTree/position = Vector2( 472, 302 )
+states/Walking(2)/node = SubResource( 1790 )
+states/Walking(2)/position = Vector2( 487, 135 )
+states/WalkingBackwards(1)/node = SubResource( 1797 )
+states/WalkingBackwards(1)/position = Vector2( 220, 36 )
+transitions = [ "Walking(2)", "BlendTree", SubResource( 1795 ), "BlendTree", "Walking(2)", SubResource( 1796 ), "Walking(2)", "WalkingBackwards(1)", SubResource( 1798 ), "WalkingBackwards(1)", "Walking(2)", SubResource( 1799 ) ]
+start_node = "Walking(2)"
+
+[sub_resource type="AnimationNodeTimeScale" id=1789]
+
+[resource]
+graph_offset = Vector2( 0, 6.87814 )
+nodes/StateMachine/node = SubResource( 1791 )
+nodes/StateMachine/position = Vector2( 122, 92.8781 )
+nodes/TimeScale/node = SubResource( 1789 )
+nodes/TimeScale/position = Vector2( 361, 150 )
+nodes/output/position = Vector2( 560, 140 )
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "StateMachine" ]

@@ -1,0 +1,142 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=30 format=2]
+
+[ext_resource path="res://Game/Iona/Animations/tateMachine/walking/Walking.tres" type="AnimationNodeBlendTree" id=1]
+
+[sub_resource type="AnimationNodeAnimation" id=1800]
+animation = "Elbow"
+
+[sub_resource type="AnimationNodeAnimation" id=1843]
+animation = "HitToBody"
+
+[sub_resource type="AnimationNodeAnimation" id=1802]
+animation = "Hook"
+
+[sub_resource type="AnimationNodeAnimation" id=1824]
+animation = "LegSweep"
+
+[sub_resource type="AnimationNodeAnimation" id=1837]
+animation = "FightingIdle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1841]
+advance_condition = "moving"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1842]
+advance_condition = "notMoving"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachine" id=1825]
+states/BlendTree/node = ExtResource( 1 )
+states/BlendTree/position = Vector2( 174, 54 )
+states/FightingIdle/node = SubResource( 1837 )
+states/FightingIdle/position = Vector2( 244, 174 )
+transitions = [ "FightingIdle", "BlendTree", SubResource( 1841 ), "BlendTree", "FightingIdle", SubResource( 1842 ) ]
+start_node = "FightingIdle"
+
+[sub_resource type="AnimationNodeAnimation" id=1812]
+animation = "chestKick"
+
+[sub_resource type="AnimationNodeAnimation" id=1813]
+animation = "headKick"
+
+[sub_resource type="AnimationNodeAnimation" id=1846]
+animation = "hitToFace"
+
+[sub_resource type="AnimationNodeAnimation" id=1794]
+animation = "punch"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1826]
+advance_condition = "legSweep"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1827]
+advance_condition = "headKick"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1828]
+advance_condition = "chestKick"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1829]
+advance_condition = "elbow"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1830]
+advance_condition = "hook"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1831]
+advance_condition = "punch"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1832]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1833]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1834]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1835]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1836]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1840]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1844]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1845]
+advance_condition = "hitToBody"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1847]
+switch_mode = 2
+auto_advance = true
+xfade_time = 0.13
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1848]
+advance_condition = "hitToFace"
+xfade_time = 0.14
+
+[resource]
+resource_local_to_scene = true
+states/Elbow/node = SubResource( 1800 )
+states/Elbow/position = Vector2( 650, -108.856 )
+states/HitToBody/node = SubResource( 1843 )
+states/HitToBody/position = Vector2( 186.143, -289.386 )
+states/Hook/node = SubResource( 1802 )
+states/Hook/position = Vector2( 645, -61.9973 )
+states/LegSweep/node = SubResource( 1824 )
+states/LegSweep/position = Vector2( 516, -247.171 )
+states/Movement/node = SubResource( 1825 )
+states/Movement/position = Vector2( 308.143, -145.133 )
+states/chestKick/node = SubResource( 1812 )
+states/chestKick/position = Vector2( 662, -155.251 )
+states/headKick/node = SubResource( 1813 )
+states/headKick/position = Vector2( 682, -208.084 )
+states/hitToFace/node = SubResource( 1846 )
+states/hitToFace/position = Vector2( 130.143, -190.386 )
+states/punch/node = SubResource( 1794 )
+states/punch/position = Vector2( 650, -17 )
+transitions = [ "Movement", "LegSweep", SubResource( 1826 ), "Movement", "headKick", SubResource( 1827 ), "Movement", "chestKick", SubResource( 1828 ), "Movement", "Elbow", SubResource( 1829 ), "Movement", "Hook", SubResource( 1830 ), "Movement", "punch", SubResource( 1831 ), "LegSweep", "Movement", SubResource( 1832 ), "chestKick", "Movement", SubResource( 1833 ), "Elbow", "Movement", SubResource( 1834 ), "Hook", "Movement", SubResource( 1835 ), "punch", "Movement", SubResource( 1836 ), "headKick", "Movement", SubResource( 1840 ), "HitToBody", "Movement", SubResource( 1844 ), "Movement", "HitToBody", SubResource( 1845 ), "hitToFace", "Movement", SubResource( 1847 ), "Movement", "hitToFace", SubResource( 1848 ) ]
+start_node = "Movement"
+graph_offset = Vector2( 63.143, -336.386 )

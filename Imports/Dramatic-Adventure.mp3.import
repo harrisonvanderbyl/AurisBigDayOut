@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dramatic-Adventure.mp3-3cb7810c66d2204ce7bcc0f53b61d308.mp3str"
+
+[deps]
+
+source_file="res://Imports/Dramatic-Adventure.mp3"
+dest_files=[ "res://.import/Dramatic-Adventure.mp3-3cb7810c66d2204ce7bcc0f53b61d308.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

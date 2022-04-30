@@ -1,0 +1,23 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=5 format=2]
+
+[ext_resource path="res://Game/Iona/Animations/tateMachine/Attack/attackleft.tres" type="AnimationNodeStateMachine" id=1]
+[ext_resource path="res://Game/Iona/Animations/tateMachine/Attack/attackright.tres" type="AnimationNodeStateMachine" id=2]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=1]
+advance_condition = "isRight"
+xfade_time = 0.25
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=2]
+advance_condition = "isLeft"
+xfade_time = 0.25
+
+[resource]
+resource_local_to_scene = true
+resource_name = "MainGametateMachine"
+states/left/node = ExtResource( 1 )
+states/left/position = Vector2( 309.143, -271.374 )
+states/right/node = ExtResource( 2 )
+states/right/position = Vector2( 309.143, -146.374 )
+transitions = [ "left", "right", SubResource( 1 ), "right", "left", SubResource( 2 ) ]
+start_node = "left"
+graph_offset = Vector2( -51.1048, -339.838 )

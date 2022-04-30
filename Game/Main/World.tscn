@@ -1,0 +1,474 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Models/Aurie/scene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Models/Aurie/scene.gd" type="Script" id=2]
+[ext_resource path="res://Game/Main/World.gd" type="Script" id=3]
+[ext_resource path="res://Imports/enviroment/ground/Rock_Moss_001_normal.jpg" type="Texture" id=4]
+[ext_resource path="res://Game/enemies/sparrow.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Imports/enviroment/ground/Rock_Moss_001_basecolor.jpg" type="Texture" id=6]
+[ext_resource path="res://Imports/enviroment/ground/Rock_Moss_001_roughness.jpg" type="Texture" id=7]
+[ext_resource path="res://Imports/enviroment/ground/Rock_Moss_001_ambientOcclusion.jpg" type="Texture" id=8]
+[ext_resource path="res://Game/Main/gui/notifications.gd" type="Script" id=9]
+[ext_resource path="res://Game/enemies/barHorizontal_green.png" type="Texture" id=10]
+[ext_resource path="res://Game/enemies/Ho-Oh.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Imports/Dramatic-Adventure.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Game/Main/CameraEffects.gd" type="Script" id=13]
+[ext_resource path="res://Game/Effects/AshAnimation.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Game/Effects/ff0077.png" type="Texture" id=15]
+
+[sub_resource type="Shader" id=11]
+code = "// NOTE: Shader automatically converted from Godot Engine 3.4.4.stable's CanvasItemMaterial.
+
+shader_type canvas_item;
+render_mode blend_mix;
+
+"
+
+[sub_resource type="ShaderMaterial" id=12]
+shader = SubResource( 11 )
+
+[sub_resource type="Gradient" id=14]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=15]
+gradient = SubResource( 14 )
+width = 500
+
+[sub_resource type="Gradient" id=16]
+offsets = PoolRealArray( 0, 0.232394, 1 )
+colors = PoolColorArray( 0.242494, 0.433594, 0.0118561, 1, 0.236976, 0.565223, 0.00910079, 1, 0.21875, 1, 0, 1 )
+
+[sub_resource type="GradientTexture" id=17]
+gradient = SubResource( 16 )
+width = 500
+
+[sub_resource type="SphereShape" id=13]
+radius = 2.04692
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=3]
+
+[sub_resource type="SphereShape" id=6]
+
+[sub_resource type="PlaneMesh" id=4]
+size = Vector2( 100, 10000 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.611765, 0.611765, 0.611765, 1 )
+albedo_texture = ExtResource( 6 )
+metallic_specular = 0.0
+roughness_texture = ExtResource( 7 )
+normal_enabled = true
+normal_scale = 0.93
+normal_texture = ExtResource( 4 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 8 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+uv1_scale = Vector3( 10, 1000, 10 )
+
+[sub_resource type="ProceduralSky" id=19]
+sky_energy = 0.01
+ground_energy = 0.03
+sun_energy = 0.1
+
+[sub_resource type="Environment" id=18]
+background_mode = 2
+background_sky = SubResource( 19 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_energy = 10.45
+fog_depth_begin = 2.0
+fog_depth_end = 10.0
+tonemap_mode = 4
+dof_blur_far_distance = 10.69
+dof_blur_far_transition = 1.93
+dof_blur_far_amount = 0.17
+dof_blur_far_quality = 2
+dof_blur_near_enabled = true
+dof_blur_near_distance = 10.1
+dof_blur_near_amount = 0.11
+dof_blur_near_quality = 2
+glow_enabled = true
+glow_intensity = 1.12
+glow_strength = 0.86
+glow_bloom = 0.78
+glow_blend_mode = 0
+
+[node name="World" type="Spatial"]
+script = ExtResource( 3 )
+enemies = [ ExtResource( 5 ) ]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_right = 299.0
+margin_bottom = 17.0
+
+[node name="Progress" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_right = 299.0
+margin_bottom = 26.0
+size_flags_vertical = 3
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/VBoxContainer/Progress"]
+margin_right = 200.0
+margin_bottom = 26.0
+size_flags_horizontal = 0
+value = 50.0
+texture_progress = ExtResource( 10 )
+tint_under = Color( 0.721569, 0.235294, 0.235294, 1 )
+tint_progress = Color( 0.619608, 0, 0.968627, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/VBoxContainer/Progress/TextureProgress"]
+margin_right = 74.0
+margin_bottom = 25.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Progress/TextureProgress/CenterContainer"]
+margin_left = 9.0
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 19.0
+text = "Progress"
+
+[node name="HealthBar" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 30.0
+margin_right = 299.0
+margin_bottom = 56.0
+size_flags_vertical = 3
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/VBoxContainer/HealthBar"]
+margin_right = 200.0
+margin_bottom = 26.0
+size_flags_horizontal = 0
+value = 50.0
+texture_progress = ExtResource( 10 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/VBoxContainer/HealthBar/TextureProgress"]
+margin_right = 40.0
+margin_bottom = 25.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HealthBar/TextureProgress/CenterContainer"]
+margin_left = 9.0
+margin_top = 5.0
+margin_right = 31.0
+margin_bottom = 19.0
+text = "HP:"
+
+[node name="ManaBar" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 60.0
+margin_right = 299.0
+margin_bottom = 86.0
+size_flags_vertical = 3
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/VBoxContainer/ManaBar"]
+margin_right = 200.0
+margin_bottom = 26.0
+size_flags_horizontal = 0
+value = 50.0
+texture_progress = ExtResource( 10 )
+tint_progress = Color( 1, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/VBoxContainer/ManaBar/TextureProgress"]
+margin_right = 40.0
+margin_bottom = 25.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/ManaBar/TextureProgress/CenterContainer"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 35.0
+margin_bottom = 19.0
+text = "Fuel:"
+
+[node name="Experience" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 90.0
+margin_right = 299.0
+margin_bottom = 104.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Experience"]
+margin_right = 27.0
+margin_bottom = 14.0
+text = "EXP:"
+
+[node name="exp" type="Label" parent="Control/VBoxContainer/Experience"]
+margin_left = 31.0
+margin_right = 31.0
+margin_bottom = 14.0
+
+[node name="END" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 108.0
+margin_right = 299.0
+margin_bottom = 122.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/END"]
+margin_right = 31.0
+margin_bottom = 14.0
+text = "END:"
+
+[node name="exp" type="Label" parent="Control/VBoxContainer/END"]
+margin_left = 35.0
+margin_right = 35.0
+margin_bottom = 14.0
+
+[node name="WIS" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 126.0
+margin_right = 299.0
+margin_bottom = 140.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/WIS"]
+margin_right = 29.0
+margin_bottom = 14.0
+text = "WIS:"
+
+[node name="exp" type="Label" parent="Control/VBoxContainer/WIS"]
+margin_left = 33.0
+margin_right = 33.0
+margin_bottom = 14.0
+
+[node name="STR" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 144.0
+margin_right = 299.0
+margin_bottom = 158.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/STR"]
+margin_right = 26.0
+margin_bottom = 14.0
+text = "STR:"
+
+[node name="exp" type="Label" parent="Control/VBoxContainer/STR"]
+margin_left = 30.0
+margin_right = 30.0
+margin_bottom = 14.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+material = SubResource( 12 )
+margin_left = 1.0
+margin_top = 504.0
+margin_right = 477.0
+margin_bottom = 598.0
+script = ExtResource( 9 )
+
+[node name="BossHealth" type="HBoxContainer" parent="Control"]
+margin_left = 324.0
+margin_top = 21.0
+margin_right = 666.0
+margin_bottom = 47.0
+size_flags_vertical = 3
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/BossHealth"]
+margin_right = 342.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+max_value = 1000.0
+value = 1000.0
+texture_under = SubResource( 15 )
+texture_progress = SubResource( 17 )
+nine_patch_stretch = true
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/BossHealth/TextureProgress"]
+margin_right = 74.0
+margin_bottom = 25.0
+
+[node name="Label" type="Label" parent="Control/BossHealth/TextureProgress/CenterContainer"]
+margin_left = 16.0
+margin_top = 5.0
+margin_right = 58.0
+margin_bottom = 19.0
+text = "Ho-Oh"
+
+[node name="tryAgain" type="Button" parent="Control"]
+margin_left = 463.0
+margin_top = 338.0
+margin_right = 539.0
+margin_bottom = 358.0
+text = "Try Again?"
+
+[node name="Winner!" type="TextureRect" parent="Control"]
+margin_left = 407.0
+margin_top = 224.0
+margin_right = 623.0
+margin_bottom = 297.0
+texture = ExtResource( 15 )
+
+[node name="NG" type="Button" parent="Control/Winner!"]
+anchor_right = 0.367
+anchor_bottom = 0.5
+margin_left = 57.0
+margin_top = 57.0
+margin_right = 82.32
+margin_bottom = 57.0
+text = "NG+"
+
+[node name="scene" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.310384, 0 )
+script = ExtResource( 2 )
+
+[node name="BoneAttachment" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="1"]
+transform = Transform( 0.819417, 0.55524, 0.142356, 0.530594, -0.640791, -0.554848, -0.216853, 0.530184, -0.819682, -3.11599, 4.20812, 1.39 )
+bone_name = "Wrist_R.29_29"
+
+[node name="Spatial" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment" index="0"]
+visible = false
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment/Spatial/Fire" index="0"]
+transform = Transform( 0.257607, -0.553484, 0.792019, 0.127165, -0.793133, -0.595625, 0.957845, 0.254155, -0.133933, 0, 0, 0 )
+
+[node name="BoneAttachment2" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="2"]
+transform = Transform( 0.478997, 0.769745, -0.421966, -0.466157, 0.630369, 0.620752, 0.743814, -0.100636, 0.660766, -0.181734, 4.66027, 1.4626 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment2/Spatial/Fire" index="0"]
+transform = Transform( -0.18476, -0.152271, 0.970916, -0.00462303, 0.988048, 0.154079, -0.982773, 0.0239795, -0.183255, -1.19209e-06, 9.53674e-07, 4.76837e-07 )
+
+[node name="BoneAttachment3" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="3"]
+transform = Transform( 0.801026, 0.352028, -0.484183, -0.468312, 0.872313, -0.140548, 0.372882, 0.339332, 0.863605, 1.64981, 3.34974, 3.36172 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment3/Spatial/Fire" index="0"]
+transform = Transform( -0.197953, -0.09295, 0.975795, -0.681653, 0.728424, -0.0688953, -0.704388, -0.678791, -0.207554, 0, 0, 0 )
+
+[node name="BoneAttachment4" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="4"]
+transform = Transform( 0.701378, 0.648964, -0.294811, -0.462928, 0.72923, 0.503906, 0.542002, -0.216953, 0.81189, 0.508673, 4.08535, 2.66248 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment4/Spatial/Fire" index="0"]
+transform = Transform( -0.425461, -0.817349, 0.388488, -0.0865068, 0.464046, 0.881577, -0.900832, 0.34147, -0.26814, 0.00310779, -0.0428386, -0.0139819 )
+
+[node name="BoneAttachment5" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="5"]
+transform = Transform( 0.608781, 0.760857, -0.224684, -0.676323, 0.64578, 0.354338, 0.414697, -0.0637557, 0.907723, 0.890549, 3.60598, 2.50224 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment5/Spatial/Fire" index="0"]
+transform = Transform( -0.109184, -0.210162, 0.971551, -0.449566, 0.882159, 0.140303, -0.886549, -0.421456, -0.190799, 0, 0, -2.38419e-07 )
+
+[node name="BoneAttachment6" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="6"]
+transform = Transform( 0.692957, 0.710617, -0.121794, 0.719338, -0.692834, 0.0503349, -0.0486144, -0.122492, -0.991278, -2.33314, 4.59848, 0.848446 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment6/Spatial/Fire" index="0"]
+transform = Transform( -0.145358, -0.138135, 0.979689, 0.64038, -0.767944, -0.0132654, 0.754178, 0.625445, 0.200086, 4.76837e-07, 4.76837e-07, -4.76837e-07 )
+
+[node name="BoneAttachment7" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="7"]
+transform = Transform( -0.233473, 0.524399, 0.818838, 0.515108, -0.647538, 0.561567, 0.824714, 0.552901, -0.11894, -1.7113, 5.20397, 0.969305 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment7/Spatial/Fire" index="0"]
+transform = Transform( -0.874673, 0.104551, -0.473304, 0.369271, -0.488796, -0.790391, -0.313986, -0.86611, 0.388929, -7.15256e-07, 4.76837e-07, 4.76837e-07 )
+
+[node name="BoneAttachment8" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="8"]
+transform = Transform( 0.256745, 0.0953184, 0.961767, -0.412876, 0.910568, 0.0199732, -0.873851, -0.402219, 0.273138, -0.662088, 4.02675, -0.937301 )
+
+[node name="BoneAttachment9" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="9"]
+transform = Transform( 0.23713, 0.690028, 0.683835, -0.490523, 0.692636, -0.528813, -0.838544, -0.210039, 0.502719, -0.821703, 5.22527, 1.22333 )
+
+[node name="BoneAttachment10" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="10"]
+transform = Transform( 0.443544, 0.651835, 0.615126, 0.800952, -0.59626, 0.054307, 0.402175, 0.468599, -0.786556, -2.93466, 3.82834, 0.559145 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment10/Spatial/Fire" index="0"]
+transform = Transform( -0.453834, -0.881028, 0.133499, 0.439198, -0.351515, -0.826765, 0.775331, -0.316581, 0.546475, 0, 0, 0 )
+
+[node name="BoneAttachment11" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="11"]
+transform = Transform( 0.0374315, 0.611908, 0.790043, 0.596461, -0.648001, 0.473633, 0.801769, 0.453501, -0.389235, -2.36361, 4.09769, 0.176194 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment11/Spatial/Fire" index="0"]
+transform = Transform( -0.799444, 0.578457, 0.162099, 0.464143, 0.423446, 0.777988, 0.381393, 0.697194, -0.607008, 1.19209e-07, 0, -4.76837e-07 )
+
+[node name="BoneAttachment12" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="12"]
+transform = Transform( 0.856887, 0.467355, 0.217542, 0.508726, -0.698425, -0.503388, -0.083324, 0.542016, -0.836227, -3.52198, 3.94522, 1.49744 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment12/Spatial/Fire" index="0"]
+transform = Transform( -0.120373, -0.220029, 0.968039, 0.248554, -0.95075, -0.185192, 0.96111, 0.218318, 0.169133, 4.29153e-06, -9.53674e-07, 2.38419e-07 )
+
+[node name="BoneAttachment13" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="13"]
+transform = Transform( 0.856887, 0.467355, 0.217542, 0.508726, -0.698425, -0.503388, -0.083324, 0.542016, -0.836227, -3.52198, 3.94522, 1.49744 )
+
+[node name="Particles" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment13/Spatial/Fire" index="0"]
+transform = Transform( -0.140118, 0.373325, -0.917059, 0.353804, 0.883924, 0.305778, 0.924765, -0.281614, -0.255938, 9.53674e-07, 0, 4.76837e-07 )
+
+[node name="BoneAttachment15" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="14"]
+transform = Transform( 0.264492, 0.0684107, 0.961958, -0.323959, 0.94582, 0.0218098, -0.908347, -0.317404, 0.272324, -0.870134, 4.28292, -0.222911 )
+
+[node name="YellTarget" type="Area" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="15"]
+collision_layer = 384
+collision_mask = 384
+
+[node name="CollisionShape" type="CollisionShape" parent="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/YellTarget"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.57569, -1.84099e-21 )
+shape = SubResource( 13 )
+
+[node name="AnimationTree" parent="scene" index="2"]
+parameters/playback = SubResource( 3 )
+
+[node name="Music" type="AudioStreamPlayer3D" parent="scene"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.0620769, 0 )
+stream = ExtResource( 12 )
+max_db = 1.462
+autoplay = true
+
+[node name="AshAnimation" parent="scene" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149272, 0 )
+visible = false
+
+[node name="Particles" parent="scene/AshAnimation" index="0"]
+lifetime = 6.88
+
+[node name="Particles2" parent="scene/AshAnimation" index="1"]
+transform = Transform( 0.278, 0, 0, 0, 0.4, 0, 0, 0, 0.174, 0, 0.0809501, 0 )
+
+[node name="SpringArm" type="SpringArm" parent="."]
+transform = Transform( -5, 0, -4.37114e-07, -2.46338e-07, 4.13039, 2.81777, 3.61091e-07, 2.81777, -4.13039, 0, 1.19374, -1.19901 )
+collision_mask = 0
+shape = SubResource( 6 )
+spring_length = 1.846
+
+[node name="Spatial" type="Spatial" parent="SpringArm"]
+
+[node name="Camera" type="Camera" parent="SpringArm/Spatial"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+projection = 1
+current = true
+fov = 61.0
+size = 1.73219
+script = ExtResource( 13 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+light_color = Color( 0.968627, 1, 0.592157, 1 )
+light_energy = 0.655
+light_indirect_energy = 1.66
+shadow_color = Color( 0.596078, 0.596078, 0.596078, 1 )
+directional_shadow_mode = 0
+directional_shadow_bias_split_scale = 0.0
+directional_shadow_max_distance = 0.1
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 4 )
+material/0 = SubResource( 7 )
+
+[node name="scene2" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.0168416, 0, 0.999858, 0, 1, 0, -0.999858, 0, 0.0168416, 0, 0, 100 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 18 )
+
+[connection signal="button_down" from="Control/tryAgain" to="." method="_on_tryAgain_button_down"]
+[connection signal="button_down" from="Control/Winner!/NG" to="." method="_on_NG_button_down"]
+[connection signal="area_entered" from="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/YellTarget" to="." method="_on_YellTarget_area_entered"]
+[connection signal="body_entered" from="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/YellTarget" to="." method="_on_YellTarget_body_entered"]
+
+[editable path="scene"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment2/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment3/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment4/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment5/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment6/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment7/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment8/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment9/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment10/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment11/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment12/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment13/Spatial/Fire"]
+[editable path="scene/Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment15/Spatial/Fire"]
+[editable path="scene/AshAnimation"]
+[editable path="scene2"]
+[editable path="scene2/NatureFreePack2"]

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Beach Homestead
+* source:	https://sketchfab.com/3d-models/beach-homestead-394df4a75f1a4d5b80cd8d447b844871
+* author:	tuomaspaul (https://sketchfab.com/tuomaspaul)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Beach Homestead" (https://sketchfab.com/3d-models/beach-homestead-394df4a75f1a4d5b80cd8d447b844871) by tuomaspaul (https://sketchfab.com/tuomaspaul) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

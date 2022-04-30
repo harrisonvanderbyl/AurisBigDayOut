@@ -1,0 +1,181 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Imports/Imports/Aurie/scene.gltf" type="PackedScene" id=1]
+[ext_resource path="res://Game/Effects/Fire.tscn" type="PackedScene" id=2]
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Animation"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Animation"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=5]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=1]
+states/Animation/node = SubResource( 3 )
+states/Animation/position = Vector2( 525, 57 )
+"states/Animation 2/node" = SubResource( 4 )
+"states/Animation 2/position" = Vector2( 761, 57 )
+transitions = [ "Animation", "Animation 2", SubResource( 5 ), "Animation 2", "Animation", SubResource( 6 ) ]
+start_node = "Animation"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
+
+[node name="scene" instance=ExtResource( 1 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, -0.0473249, 0 )
+
+[node name="BoneAttachment" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="1"]
+transform = Transform( 0.115532, 0.156004, 0.980977, -0.459183, 0.884118, -0.0865212, -0.880797, -0.440452, 0.173778, -0.541182, 3.4209, -2.07522 )
+bone_name = "Tail_R_2_jnt.49_49"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment2" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="2"]
+transform = Transform( 0.155347, 0.924293, -0.348639, -0.742599, 0.342008, 0.575827, 0.65147, 0.169446, 0.739509, -0.224226, 4.47592, 1.38536 )
+bone_name = "Elbow_L.10_10"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment2" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment2/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment3" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="3"]
+transform = Transform( -0.243369, 0.520885, -0.8182, -0.95892, -0.00244851, 0.283667, 0.145755, 0.853623, 0.500083, -0.508841, 1.99618, 2.78853 )
+bone_name = "L_Wing_Sec_end_jnt.14_14"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment3" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment3/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment4" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="4"]
+transform = Transform( -0.10654, 0.941191, -0.320639, -0.921883, 0.027317, 0.386504, 0.372533, 0.33677, 0.864757, -0.131729, 3.42501, 2.4441 )
+bone_name = "Finger_1_L.12_12"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment4" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment4/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment5" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="5"]
+transform = Transform( 0.190985, 0.931517, -0.309516, -0.95089, 0.25382, 0.177155, 0.243584, 0.260481, 0.934246, 0.138665, 2.8851, 2.17604 )
+bone_name = "Elbow_L_extra_2_2_jnt.20_20"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment5" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment5/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment6" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="6"]
+transform = Transform( 0.378564, 0.864205, -0.33142, 0.915027, -0.40334, -0.00655246, -0.139337, -0.300777, -0.943461, -1.99673, 4.44222, 0.912294 )
+bone_name = "Volume_Shldr_R_jnt.33_33"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment6" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment6/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment7" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="7"]
+transform = Transform( -0.158354, 0.778646, 0.607152, 0.513064, -0.46049, 0.724372, 0.843617, 0.426215, -0.326575, -1.57197, 5.20692, 0.965358 )
+bone_name = "Shldr_Sec_R.41_41"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment7" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment7/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment8" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="8"]
+transform = Transform( 0.197137, 0.145443, 0.969528, -0.459804, 0.887137, -0.0395901, -0.865862, -0.437988, 0.241763, -0.575371, 3.99028, -0.944873 )
+bone_name = "TailM_2_jnt.47_47"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment8" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment8/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment9" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="9"]
+transform = Transform( 0.265713, 0.858821, 0.437975, -0.435374, 0.512239, -0.740311, -0.860143, 0.00602719, 0.510018, -0.669392, 5.22426, 1.21844 )
+bone_name = "Shldr_Sec_L.23_23"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment9" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment9/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment10" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="10"]
+transform = Transform( 0.213978, 0.897917, 0.384654, 0.909814, -0.326541, 0.256142, 0.355599, 0.295155, -0.88681, -2.34305, 3.50755, 0.699916 )
+bone_name = "Elbow_R_extra_1_2_jnt.36_36"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment10" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment10/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment11" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="11"]
+transform = Transform( -0.00656283, 0.875981, 0.482301, 0.581272, -0.389116, 0.714641, 0.813683, 0.285038, -0.506629, -1.99015, 3.95453, 0.229833 )
+bone_name = "Elbow_Sec_End_R.40_40"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment11" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment11/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment12" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="12"]
+transform = Transform( 0.120264, 0.977132, 0.175358, 0.916562, -0.04143, -0.39774, -0.381379, 0.20856, -0.900584, -2.59072, 3.38103, 1.78842 )
+bone_name = "Finger_1_R.30_30"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment12" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment12/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment13" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="13"]
+transform = Transform( 0.120264, 0.977132, 0.175358, 0.916562, -0.04143, -0.39774, -0.381379, 0.20856, -0.900584, -2.59072, 3.38103, 1.78842 )
+bone_name = "Finger_1_R.30_30"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment13" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment13/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="BoneAttachment15" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="14"]
+transform = Transform( 0.227253, 0.109641, 0.967644, -0.353562, 0.93513, -0.0229221, -0.907387, -0.336914, 0.251275, -0.754059, 4.26973, -0.231265 )
+bone_name = "TailM_1_jnt.46_46"
+
+[node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment15" index="0"]
+
+[node name="Fire" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment15/Spatial" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource( 1 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 2 )
+
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment2/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment3/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment4/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment5/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment6/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment7/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment8/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment9/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment10/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment11/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment12/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment13/Spatial/Fire"]
+[editable path="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment15/Spatial/Fire"]

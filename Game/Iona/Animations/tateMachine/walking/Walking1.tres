@@ -1,0 +1,14 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=3 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1788]
+animation = "Walking(1)"
+
+[sub_resource type="AnimationNodeTimeScale" id=1789]
+
+[resource]
+nodes/Animation/node = SubResource( 1788 )
+nodes/Animation/position = Vector2( 80, 120 )
+nodes/TimeScale/node = SubResource( 1789 )
+nodes/TimeScale/position = Vector2( 361, 150 )
+nodes/output/position = Vector2( 560, 140 )
+node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]

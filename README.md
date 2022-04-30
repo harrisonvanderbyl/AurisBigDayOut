@@ -2,11 +2,12 @@
 A fangame for BTDeM
 
 SelfDox
-[Patreon]: https://www.patreon.com/Unexplored_Horizons
 
-[Royal Road]: https://www.royalroad.com/profile/82702
+-[Patreon](https://www.patreon.com/Unexplored_Horizons)
 
-[ScribbleHub(NSFW)]:https://www.scribblehub.com/profile/67733/toungetied/
+-[Royal Road](https://www.royalroad.com/profile/82702)
 
-[TikTok]:https://www.tiktok.com/@plasmaware
+-[ScribbleHub(NSFW)](https://www.scribblehub.com/profile/67733/toungetied/)
+
+-[TikTok](https://www.tiktok.com/@plasmaware)
 

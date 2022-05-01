@@ -1,8 +1,10 @@
 # Auri's Big Day Out
+
 A fangame for [BtDEM](https://www.royalroad.com/fiction/36299/beneath-the-dragoneye-moons)
 
 # Downloads
--[Windows](https://drive.google.com/file/d/1oDOJZXerrnhYUTo7Udms1Q7oT0lDk-88/view?usp=sharing)
+
+-[Windows](bit.ly/3F1IpRo)
 
 -[Linux](https://drive.google.com/file/d/1G8eksyKv18PqJcnEjHl8hj-aovZexpCZ/view?usp=sharing)
 
@@ -35,4 +37,3 @@ Left-joystick: move
 -[Royal Road](https://www.royalroad.com/profile/82702)
 
 -[TikTok](https://www.tiktok.com/@plasmaware)
-

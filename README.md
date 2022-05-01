@@ -4,7 +4,7 @@ A fangame for [BtDEM](https://www.royalroad.com/fiction/36299/beneath-the-dragon
 
 # Downloads
 
--[Windows](bit.ly/3F1IpRo)
+-[Windows](https://bit.ly/3F1IpRo)
 
 -[Linux](https://drive.google.com/file/d/1G8eksyKv18PqJcnEjHl8hj-aovZexpCZ/view?usp=sharing)
 

@@ -12,26 +12,26 @@ animation = "Hook(1)"
 [sub_resource type="AnimationNodeAnimation" id=1823]
 animation = "Leg Sweep(1)"
 
-[sub_resource type="AnimationNodeAnimation" id=1845]
+[sub_resource type="AnimationNodeAnimation" id=1862]
 animation = "running"
 
-[sub_resource type="AnimationNodeTimeScale" id=1846]
+[sub_resource type="AnimationNodeTimeScale" id=1863]
 
-[sub_resource type="AnimationNodeBlendTree" id=1847]
-nodes/Animation/node = SubResource( 1845 )
+[sub_resource type="AnimationNodeBlendTree" id=1864]
+nodes/Animation/node = SubResource( 1862 )
 nodes/Animation/position = Vector2( 60, 100 )
-nodes/TimeScale/node = SubResource( 1846 )
+nodes/TimeScale/node = SubResource( 1863 )
 nodes/TimeScale/position = Vector2( 277, 117 )
 nodes/output/position = Vector2( 500, 100 )
 node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]
 
-[sub_resource type="AnimationNodeAnimation" id=1843]
+[sub_resource type="AnimationNodeAnimation" id=1865]
 animation = "Walking(2)"
 
 [sub_resource type="AnimationNodeAnimation" id=1850]
 animation = "WalkingBackwards(2)"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1848]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1866]
 advance_condition = "running"
 xfade_time = 0.5
 
@@ -47,44 +47,44 @@ xfade_time = 0.5
 advance_condition = "notWalkingBackwards"
 xfade_time = 0.5
 
-[sub_resource type="AnimationNodeStateMachine" id=1844]
-states/BlendTree/node = SubResource( 1847 )
+[sub_resource type="AnimationNodeStateMachine" id=1867]
+states/BlendTree/node = SubResource( 1864 )
 states/BlendTree/position = Vector2( 451, 57 )
-states/Walking(2)/node = SubResource( 1843 )
+states/Walking(2)/node = SubResource( 1865 )
 states/Walking(2)/position = Vector2( 222, 57 )
 states/WalkingBackwards(2)/node = SubResource( 1850 )
 states/WalkingBackwards(2)/position = Vector2( 244, 208 )
-transitions = [ "Walking(2)", "BlendTree", SubResource( 1848 ), "BlendTree", "Walking(2)", SubResource( 1849 ), "Walking(2)", "WalkingBackwards(2)", SubResource( 1851 ), "WalkingBackwards(2)", "Walking(2)", SubResource( 1852 ) ]
+transitions = [ "Walking(2)", "BlendTree", SubResource( 1866 ), "BlendTree", "Walking(2)", SubResource( 1849 ), "Walking(2)", "WalkingBackwards(2)", SubResource( 1851 ), "WalkingBackwards(2)", "Walking(2)", SubResource( 1852 ) ]
 start_node = "Walking(2)"
 
 [sub_resource type="AnimationNodeTimeScale" id=1839]
 
-[sub_resource type="AnimationNodeBlendTree" id=1840]
+[sub_resource type="AnimationNodeBlendTree" id=1868]
 graph_offset = Vector2( -478, 32 )
-nodes/StateMachine/node = SubResource( 1844 )
+nodes/StateMachine/node = SubResource( 1867 )
 nodes/StateMachine/position = Vector2( 20, 100 )
 nodes/TimeScale/node = SubResource( 1839 )
 nodes/TimeScale/position = Vector2( 280, 100 )
 nodes/output/position = Vector2( 440, 80 )
 node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "StateMachine" ]
 
-[sub_resource type="AnimationNodeAnimation" id=1837]
+[sub_resource type="AnimationNodeAnimation" id=1869]
 animation = "Fighting Idle(1)"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1841]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1870]
 advance_condition = "moving"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1842]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1871]
 advance_condition = "notMoving"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachine" id=1824]
-states/BlendTree/node = SubResource( 1840 )
+[sub_resource type="AnimationNodeStateMachine" id=1872]
+states/BlendTree/node = SubResource( 1868 )
 states/BlendTree/position = Vector2( 389, 40 )
-"states/Fighting Idle(1)/node" = SubResource( 1837 )
+"states/Fighting Idle(1)/node" = SubResource( 1869 )
 "states/Fighting Idle(1)/position" = Vector2( 218, 134 )
-transitions = [ "Fighting Idle(1)", "BlendTree", SubResource( 1841 ), "BlendTree", "Fighting Idle(1)", SubResource( 1842 ) ]
+transitions = [ "Fighting Idle(1)", "BlendTree", SubResource( 1870 ), "BlendTree", "Fighting Idle(1)", SubResource( 1871 ) ]
 start_node = "Fighting Idle(1)"
 
 [sub_resource type="AnimationNodeAnimation" id=1793]
@@ -99,56 +99,56 @@ animation = "headkick(1)"
 [sub_resource type="AnimationNodeAnimation" id=1854]
 animation = "hitToFace(1)"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1825]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1873]
 advance_condition = "punch"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1826]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1874]
 advance_condition = "hook"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1827]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1875]
 advance_condition = "elbow"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1828]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1876]
 advance_condition = "chestKick"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1829]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1877]
 advance_condition = "headKick"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1830]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1878]
 advance_condition = "legSweep"
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1831]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1879]
 switch_mode = 2
 auto_advance = true
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1832]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1880]
 switch_mode = 2
 auto_advance = true
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1833]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1881]
 switch_mode = 2
 auto_advance = true
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1834]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1882]
 switch_mode = 2
 auto_advance = true
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1835]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1883]
 switch_mode = 2
 auto_advance = true
 xfade_time = 0.25
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=1836]
+[sub_resource type="AnimationNodeStateMachineTransition" id=1884]
 switch_mode = 2
 auto_advance = true
 xfade_time = 0.25
@@ -181,7 +181,7 @@ states/Hook(1)/node = SubResource( 1801 )
 states/Hook(1)/position = Vector2( 678, 174.803 )
 "states/Leg Sweep(1)/node" = SubResource( 1823 )
 "states/Leg Sweep(1)/position" = Vector2( 678, 383.237 )
-states/Movement/node = SubResource( 1824 )
+states/Movement/node = SubResource( 1872 )
 states/Movement/position = Vector2( 253.143, 263.781 )
 states/Punching(1)/node = SubResource( 1793 )
 states/Punching(1)/position = Vector2( 625, 115 )
@@ -191,6 +191,6 @@ states/headkick(1)/node = SubResource( 1814 )
 states/headkick(1)/position = Vector2( 670, 309.781 )
 states/hitToFace(1)/node = SubResource( 1854 )
 states/hitToFace(1)/position = Vector2( 177.526, 115.072 )
-transitions = [ "Movement", "Punching(1)", SubResource( 1825 ), "Movement", "Hook(1)", SubResource( 1826 ), "Movement", "Elbow(1)", SubResource( 1827 ), "Movement", "chestKick(1)", SubResource( 1828 ), "Movement", "headkick(1)", SubResource( 1829 ), "Movement", "Leg Sweep(1)", SubResource( 1830 ), "Punching(1)", "Movement", SubResource( 1831 ), "Hook(1)", "Movement", SubResource( 1832 ), "Elbow(1)", "Movement", SubResource( 1833 ), "chestKick(1)", "Movement", SubResource( 1834 ), "headkick(1)", "Movement", SubResource( 1835 ), "Leg Sweep(1)", "Movement", SubResource( 1836 ), "hitToFace(1)", "Movement", SubResource( 1855 ), "HitToBody(1)", "Movement", SubResource( 1856 ), "Movement", "hitToFace(1)", SubResource( 1857 ), "Movement", "HitToBody(1)", SubResource( 1858 ) ]
+transitions = [ "Movement", "Punching(1)", SubResource( 1873 ), "Movement", "Hook(1)", SubResource( 1874 ), "Movement", "Elbow(1)", SubResource( 1875 ), "Movement", "chestKick(1)", SubResource( 1876 ), "Movement", "headkick(1)", SubResource( 1877 ), "Movement", "Leg Sweep(1)", SubResource( 1878 ), "Punching(1)", "Movement", SubResource( 1879 ), "Hook(1)", "Movement", SubResource( 1880 ), "Elbow(1)", "Movement", SubResource( 1881 ), "chestKick(1)", "Movement", SubResource( 1882 ), "headkick(1)", "Movement", SubResource( 1883 ), "Leg Sweep(1)", "Movement", SubResource( 1884 ), "hitToFace(1)", "Movement", SubResource( 1855 ), "HitToBody(1)", "Movement", SubResource( 1856 ), "Movement", "hitToFace(1)", SubResource( 1857 ), "Movement", "HitToBody(1)", SubResource( 1858 ) ]
 start_node = "Movement"
 graph_offset = Vector2( 0.526489, 60.072 )

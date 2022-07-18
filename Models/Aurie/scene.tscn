@@ -34,7 +34,7 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, -0.0473249, 0 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="1"]
-transform = Transform( 0.115532, 0.156004, 0.980977, -0.459183, 0.884118, -0.0865212, -0.880797, -0.440452, 0.173778, -0.541182, 3.4209, -2.07522 )
+transform = Transform( 0.175153, 0.110752, 0.978292, -0.419054, 0.907538, -0.0277147, -0.890907, -0.405103, 0.205369, -0.52132, 3.48527, -2.0879 )
 bone_name = "Tail_R_2_jnt.49_49"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment" index="0"]
@@ -43,7 +43,7 @@ bone_name = "Tail_R_2_jnt.49_49"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment2" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="2"]
-transform = Transform( 0.155347, 0.924293, -0.348639, -0.742599, 0.342008, 0.575827, 0.65147, 0.169446, 0.739509, -0.224226, 4.47592, 1.38536 )
+transform = Transform( 0.333237, -0.854696, -0.398055, 0.93572, 0.351597, 0.0284074, 0.115675, -0.381934, 0.916922, -0.283791, 5.85956, 0.921274 )
 bone_name = "Elbow_L.10_10"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment2" index="0"]
@@ -52,7 +52,7 @@ bone_name = "Elbow_L.10_10"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment3" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="3"]
-transform = Transform( -0.243369, 0.520885, -0.8182, -0.95892, -0.00244851, 0.283667, 0.145755, 0.853623, 0.500083, -0.508841, 1.99618, 2.78853 )
+transform = Transform( 0.692929, -0.672345, 0.260385, 0.707751, 0.703214, -0.0676643, -0.137612, 0.231175, 0.963131, 1.23382, 8.35529, 1.1506 )
 bone_name = "L_Wing_Sec_end_jnt.14_14"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment3" index="0"]
@@ -61,7 +61,7 @@ bone_name = "L_Wing_Sec_end_jnt.14_14"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment4" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="4"]
-transform = Transform( -0.10654, 0.941191, -0.320639, -0.921883, 0.027317, 0.386504, 0.372533, 0.33677, 0.864757, -0.131729, 3.42501, 2.4441 )
+transform = Transform( 0.576918, -0.758211, -0.303778, 0.81655, 0.526141, 0.23753, -0.020268, -0.385085, 0.922659, 0.197824, 7.24149, 1.24529 )
 bone_name = "Finger_1_L.12_12"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment4" index="0"]
@@ -70,7 +70,7 @@ bone_name = "Finger_1_L.12_12"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment5" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="5"]
-transform = Transform( 0.190985, 0.931517, -0.309516, -0.95089, 0.25382, 0.177155, 0.243584, 0.260481, 0.934246, 0.138665, 2.8851, 2.17604 )
+transform = Transform( 0.465504, -0.863355, -0.194741, 0.84491, 0.367993, 0.388212, -0.263502, -0.345252, 0.900759, 0.42877, 7.53104, 0.720547 )
 bone_name = "Elbow_L_extra_2_2_jnt.20_20"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment5" index="0"]
@@ -79,7 +79,7 @@ bone_name = "Elbow_L_extra_2_2_jnt.20_20"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment6" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="6"]
-transform = Transform( 0.378564, 0.864205, -0.33142, 0.915027, -0.40334, -0.00655246, -0.139337, -0.300777, -0.943461, -1.99673, 4.44222, 0.912294 )
+transform = Transform( 0.297565, -0.550476, 0.78002, -0.831922, -0.550329, -0.0710137, 0.468359, -0.627785, -0.621712, -1.98093, 5.8132, 0.447415 )
 bone_name = "Volume_Shldr_R_jnt.33_33"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment6" index="0"]
@@ -88,7 +88,7 @@ bone_name = "Volume_Shldr_R_jnt.33_33"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment7" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="7"]
-transform = Transform( -0.158354, 0.778646, 0.607152, 0.513064, -0.46049, 0.724372, 0.843617, 0.426215, -0.326575, -1.57197, 5.20692, 0.965358 )
+transform = Transform( -0.324648, -0.861067, 0.391365, 0.369183, -0.496316, -0.785731, 0.870809, -0.110601, 0.479019, -1.68154, 5.17829, 0.971953 )
 bone_name = "Shldr_Sec_R.41_41"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment7" index="0"]
@@ -97,7 +97,7 @@ bone_name = "Shldr_Sec_R.41_41"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment8" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="8"]
-transform = Transform( 0.197137, 0.145443, 0.969528, -0.459804, 0.887137, -0.0395901, -0.865862, -0.437988, 0.241763, -0.575371, 3.99028, -0.944873 )
+transform = Transform( 0.256076, 0.0999364, 0.961477, -0.414819, 0.909765, 0.0159197, -0.873127, -0.402915, 0.274425, -0.631005, 4.01074, -0.941206 )
 bone_name = "TailM_2_jnt.47_47"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment8" index="0"]
@@ -106,7 +106,7 @@ bone_name = "TailM_2_jnt.47_47"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment9" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="9"]
-transform = Transform( 0.265713, 0.858821, 0.437975, -0.435374, 0.512239, -0.740311, -0.860143, 0.00602719, 0.510018, -0.669392, 5.22426, 1.21844 )
+transform = Transform( 0.19983, -0.811284, 0.549441, -0.372698, 0.455667, 0.80837, -0.906181, -0.366312, -0.211309, -0.791815, 5.19984, 1.22576 )
 bone_name = "Shldr_Sec_L.23_23"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment9" index="0"]
@@ -115,7 +115,7 @@ bone_name = "Shldr_Sec_L.23_23"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment10" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="10"]
-transform = Transform( 0.213978, 0.897917, 0.384654, 0.909814, -0.326541, 0.256142, 0.355599, 0.295155, -0.88681, -2.34305, 3.50755, 0.699916 )
+transform = Transform( 0.0945138, -0.898458, 0.428766, -0.530419, -0.409917, -0.74204, 0.84245, -0.157293, -0.515302, -2.09295, 6.50842, -0.289305 )
 bone_name = "Elbow_R_extra_1_2_jnt.36_36"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment10" index="0"]
@@ -124,7 +124,7 @@ bone_name = "Elbow_R_extra_1_2_jnt.36_36"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment11" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="11"]
-transform = Transform( -0.00656283, 0.875981, 0.482301, 0.581272, -0.389116, 0.714641, 0.813683, 0.285038, -0.506629, -1.99015, 3.95453, 0.229833 )
+transform = Transform( -0.209383, -0.909245, 0.359768, -0.0246312, -0.362902, -0.931502, 0.977524, -0.203902, 0.0535897, -1.80606, 5.83312, -0.372745 )
 bone_name = "Elbow_Sec_End_R.40_40"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment11" index="0"]
@@ -133,7 +133,7 @@ bone_name = "Elbow_Sec_End_R.40_40"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment12" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="12"]
-transform = Transform( 0.120264, 0.977132, 0.175358, 0.916562, -0.04143, -0.39774, -0.381379, 0.20856, -0.900584, -2.59072, 3.38103, 1.78842 )
+transform = Transform( 0.51513, -0.823048, 0.239232, -0.790305, -0.564135, -0.239101, 0.331751, -0.0658983, -0.941063, -2.62305, 7.17315, 0.440776 )
 bone_name = "Finger_1_R.30_30"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment12" index="0"]
@@ -142,7 +142,7 @@ bone_name = "Finger_1_R.30_30"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment13" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="13"]
-transform = Transform( 0.120264, 0.977132, 0.175358, 0.916562, -0.04143, -0.39774, -0.381379, 0.20856, -0.900584, -2.59072, 3.38103, 1.78842 )
+transform = Transform( 0.51513, -0.823048, 0.239232, -0.790305, -0.564135, -0.239101, 0.331751, -0.0658983, -0.941063, -2.62305, 7.17315, 0.440776 )
 bone_name = "Finger_1_R.30_30"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment13" index="0"]
@@ -151,7 +151,7 @@ bone_name = "Finger_1_R.30_30"
 transform = Transform( 1, -2.98023e-08, -3.72529e-09, 0, 1, 0, 7.45058e-09, -3.72529e-09, 1, 0, 0, 0 )
 
 [node name="BoneAttachment15" type="BoneAttachment" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton" index="14"]
-transform = Transform( 0.227253, 0.109641, 0.967644, -0.353562, 0.93513, -0.0229221, -0.907387, -0.336914, 0.251275, -0.754059, 4.26973, -0.231265 )
+transform = Transform( 0.264714, 0.0696353, 0.961809, -0.318348, 0.947783, 0.0189974, -0.910264, -0.311219, 0.27306, -0.839225, 4.26249, -0.2253 )
 bone_name = "TailM_1_jnt.46_46"
 
 [node name="Spatial" type="Spatial" parent="Sketchfab_model/root/GLTF_SceneRootNode/RootNode0_0/skeletal1_1/GLTF_created_0/Skeleton/BoneAttachment15" index="0"]

@@ -87,18 +87,18 @@ rings = 1
 
 [node name="Particles" type="Particles"]
 transform = Transform( 4, 6.62112e-10, 1.15857e-07, 1.15857e-07, -0.0456999, -3.99974, 6.62112e-10, 3.99974, -0.0456999, -0.164246, 0.284485, -1.58173 )
-amount = 100
+amount = 5
 speed_scale = 0.29
 process_material = SubResource( 1775 )
 draw_pass_1 = SubResource( 1772 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
-transform = Transform( 0.750081, 0, 0, 0, 0.750081, 0, 0, -9.31323e-10, 0.750081, 0.0115372, 4.99984, -0.0558777 )
+transform = Transform( 0.750081, 0, 0, 0, 0.750081, 0, 0, -9.31323e-10, 0.750081, -0.0298021, 5.01792, -0.0558777 )
 light_color = Color( 0.517647, 0.254902, 0.0627451, 1 )
-light_energy = 2.08603
+light_energy = 1.90015
 light_indirect_energy = 0.913
 light_specular = 1.491
-omni_range = 79.4063
-omni_attenuation = 4.59479
+omni_range = 39.231
+omni_attenuation = 14.42
 omni_shadow_mode = 0
 script = ExtResource( 1 )

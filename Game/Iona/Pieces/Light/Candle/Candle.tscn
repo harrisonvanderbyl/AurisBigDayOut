@@ -51,7 +51,6 @@ surfaces/0 = {
 }
 
 [node name="Group375" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Cylinder599" type="Spatial" parent="."]
 transform = Transform( -0.173648, -0.984808, -5.72263e-09, 0.984808, -0.173648, 3.24547e-08, -3.29553e-08, 0, 1, 0, 0, 0 )

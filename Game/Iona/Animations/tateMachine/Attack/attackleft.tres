@@ -42,7 +42,7 @@ animation = "headKick"
 [sub_resource type="AnimationNodeAnimation" id=1846]
 animation = "hitToFace"
 
-[sub_resource type="AnimationNodeAnimation" id=1794]
+[sub_resource type="AnimationNodeAnimation" id=1859]
 animation = "punch"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=1826]
@@ -135,7 +135,7 @@ states/headKick/node = SubResource( 1813 )
 states/headKick/position = Vector2( 682, -208.084 )
 states/hitToFace/node = SubResource( 1846 )
 states/hitToFace/position = Vector2( 130.143, -190.386 )
-states/punch/node = SubResource( 1794 )
+states/punch/node = SubResource( 1859 )
 states/punch/position = Vector2( 650, -17 )
 transitions = [ "Movement", "LegSweep", SubResource( 1826 ), "Movement", "headKick", SubResource( 1827 ), "Movement", "chestKick", SubResource( 1828 ), "Movement", "Elbow", SubResource( 1829 ), "Movement", "Hook", SubResource( 1830 ), "Movement", "punch", SubResource( 1831 ), "LegSweep", "Movement", SubResource( 1832 ), "chestKick", "Movement", SubResource( 1833 ), "Elbow", "Movement", SubResource( 1834 ), "Hook", "Movement", SubResource( 1835 ), "punch", "Movement", SubResource( 1836 ), "headKick", "Movement", SubResource( 1840 ), "HitToBody", "Movement", SubResource( 1844 ), "Movement", "HitToBody", SubResource( 1845 ), "hitToFace", "Movement", SubResource( 1847 ), "Movement", "hitToFace", SubResource( 1848 ) ]
 start_node = "Movement"

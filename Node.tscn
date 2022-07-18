@@ -1,0 +1,189 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Models/Aurie/auri.png" type="Texture" id=1]
+[ext_resource path="res://Models/Aurie/snowflakes_PNG7590.png" type="Texture" id=2]
+[ext_resource path="res://Models/Aurie/fenrir.png" type="Texture" id=3]
+[ext_resource path="res://Node.tres" type="Environment" id=4]
+[ext_resource path="res://gifmaker.gd" type="Script" id=5]
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
+
+[sub_resource type="CanvasItemMaterial" id=12]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.397516, 0.639752, 1 )
+colors = PoolColorArray( 0.00390625, 0.241257, 1, 1, 1, 0.785995, 0.00390625, 1, 1, 0.411377, 0.404398, 1, 1, 0.0117188, 0, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0.0434783, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.266304, 0.981818 ), 0.320309, 0.320309, 0, 0, Vector2( 1, 0 ), -7.38788, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+flag_disable_z = true
+spread = 78.53
+gravity = Vector3( 0, -98, 0 )
+initial_velocity = 19.6
+initial_velocity_random = 0.93
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 5 )
+color = Color( 1, 1, 1, 0.27451 )
+color_ramp = SubResource( 3 )
+
+[sub_resource type="OpenSimplexNoise" id=7]
+
+[sub_resource type="NoiseTexture" id=8]
+width = 12
+height = 12
+noise = SubResource( 7 )
+
+[sub_resource type="NoiseTexture" id=13]
+width = 1
+height = 1
+
+[sub_resource type="ParticlesMaterial" id=9]
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 78.53
+gravity = Vector3( 0, -98, 0 )
+initial_velocity = 9.8
+initial_velocity_random = 0.93
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 5 )
+color = Color( 1, 1, 1, 0.27451 )
+color_ramp = SubResource( 3 )
+
+[sub_resource type="World" id=24]
+environment = ExtResource( 4 )
+
+[sub_resource type="Shader" id=21]
+code = "// NOTE: Shader automatically converted from Godot Engine 3.4.4.stable's CanvasItemMaterial.
+
+shader_type canvas_item;
+render_mode blend_mix,unshaded;
+
+void fragment(){
+	
+	//COLOR*=1.0;
+}"
+
+[sub_resource type="ShaderMaterial" id=22]
+shader = SubResource( 21 )
+
+[sub_resource type="Gradient" id=16]
+offsets = PoolRealArray( 0, 0.10559, 0.571429, 0.714286, 1 )
+colors = PoolColorArray( 0.614351, 0.485245, 0.633789, 1, 0, 0.238281, 1, 1, 1, 1, 1, 1, 0, 1, 0.765625, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=17]
+gradient = SubResource( 16 )
+
+[sub_resource type="ParticlesMaterial" id=18]
+emission_shape = 2
+emission_box_extents = Vector3( 20, 1, 1 )
+flag_disable_z = true
+direction = Vector3( -100, -30, 0 )
+spread = 11.3
+gravity = Vector3( 0, 11.084, 0 )
+orbit_velocity = 0.09
+orbit_velocity_random = 0.43
+scale = 0.13
+scale_curve = SubResource( 5 )
+color = Color( 1, 1, 1, 0.0509804 )
+color_ramp = SubResource( 17 )
+
+[sub_resource type="ParticlesMaterial" id=19]
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 78.53
+gravity = Vector3( 0, -98, 0 )
+initial_velocity = 9.8
+initial_velocity_random = 0.93
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 5 )
+color = Color( 1, 1, 1, 0.27451 )
+color_ramp = SubResource( 17 )
+
+[sub_resource type="ViewportTexture" id=23]
+viewport_path = NodePath("CanvasLayer")
+
+[node name="Node" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1.059, 20000 )
+texture = SubResource( 11 )
+
+[node name="Auri" type="Sprite" parent="."]
+material = SubResource( 12 )
+position = Vector2( 303, 307 )
+texture = ExtResource( 1 )
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+material = SubResource( 1 )
+position = Vector2( 368, 281 )
+scale = Vector2( 0.697, 0.693 )
+amount = 50
+process_material = SubResource( 6 )
+texture = SubResource( 8 )
+
+[node name="Light2D" type="Light2D" parent="Particles2D2"]
+enabled = false
+texture = SubResource( 13 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+material = SubResource( 1 )
+position = Vector2( 339, 282 )
+amount = 50
+process_material = SubResource( 9 )
+texture = SubResource( 8 )
+
+[node name="CanvasLayer" type="Viewport" parent="."]
+size = Vector2( 218, 218 )
+world = SubResource( 24 )
+transparent_bg = true
+handle_input_locally = false
+usage = 0
+render_target_v_flip = true
+script = ExtResource( 5 )
+
+[node name="Fenrir" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 99, 101 )
+texture = ExtResource( 3 )
+
+[node name="Particles2D4" type="Particles2D" parent="CanvasLayer"]
+material = SubResource( 22 )
+position = Vector2( 20, 69 )
+rotation = 1.13795
+amount = 400
+lifetime = 6.8
+local_coords = false
+process_material = SubResource( 18 )
+texture = ExtResource( 2 )
+
+[node name="Particles2D3" type="Particles2D" parent="CanvasLayer"]
+material = SubResource( 1 )
+position = Vector2( 77, 74 )
+amount = 50
+process_material = SubResource( 19 )
+texture = SubResource( 8 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 478.0
+margin_top = 186.0
+margin_right = 731.0
+margin_bottom = 428.0
+texture = SubResource( 23 )

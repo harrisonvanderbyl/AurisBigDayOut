@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game/enviroment/tree2.tscn" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="NatureFreePack2" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 14.378 )
+
+[node name="NatureFreePack3" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 19.1358 )
+
+[node name="NatureFreePack4" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 25.0919 )
+
+[node name="NatureFreePack5" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 30.9777 )
+
+[node name="NatureFreePack9" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 8.21298 )
+
+[node name="NatureFreePack10" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 31.292 )
+
+[node name="NatureFreePack11" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 36.0498 )
+
+[node name="NatureFreePack12" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 42.0059 )
+
+[node name="NatureFreePack13" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.8579, 0, 47.8917 )
+
+[node name="NatureFreePack14" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 12.7047 )
+
+[node name="NatureFreePack15" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 17.4625 )
+
+[node name="NatureFreePack16" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 23.4186 )
+
+[node name="NatureFreePack17" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 29.3045 )
+
+[node name="NatureFreePack21" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 6.53971 )
+
+[node name="NatureFreePack22" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 29.6187 )
+
+[node name="NatureFreePack23" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 34.3765 )
+
+[node name="NatureFreePack24" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 40.3326 )
+
+[node name="NatureFreePack25" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4746, 0, 46.2185 )
+
+[node name="NatureFreePack26" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 15.2655 )
+
+[node name="NatureFreePack27" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 20.0233 )
+
+[node name="NatureFreePack28" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 25.9794 )
+
+[node name="NatureFreePack29" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 31.8653 )
+
+[node name="NatureFreePack33" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 9.10049 )
+
+[node name="NatureFreePack34" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 32.1795 )
+
+[node name="NatureFreePack35" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 36.9373 )
+
+[node name="NatureFreePack36" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 42.8934 )
+
+[node name="NatureFreePack37" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9043, 0, 48.7793 )
